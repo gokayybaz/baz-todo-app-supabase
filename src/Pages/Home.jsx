@@ -6,6 +6,8 @@ import AddTodo from '../Components/AddTodo/AddTodo'
 import CompletedTodoList from '../Components/CompletedTodoList/CompletedTodoList'
 import { Link, useNavigate } from 'react-router'
 import supabase from '../Helpers/supabaseClient'
+import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer'
 
 function Home() {
   // Add Todo: Sadece todo ekleme işlemini yapacak.
@@ -24,23 +26,7 @@ function Home() {
   const navigate = useNavigate();
   return (
     <>
-     <nav>
-        <div>
-          <h1>Baz Todo App w/Supabase</h1>
-        </div>
-        <div>
-          <Link to={"/login"}>Giriş Yap</Link>
-          <Link to={"/register"}>Kayıt Ol</Link>
-          <button onClick={ async() => {
-             const { error } = await supabase.auth.signOut();
-             if (error) {
-               console.error("Çıkış yapılırken hata oluştu:", error);
-               return;
-             }
-             navigate('login')
-          }}>Çıkış Yap</button>
-        </div>
-      </nav>
+     <Navbar />
       <div style={{display: 'flex', justifyContent: 'center', height:'100vh'}}>
       <div style={{marginRight: 50}}>
       <AddTodo setTodo={setTodoList} todoList={todoList} />
@@ -48,7 +34,7 @@ function Home() {
       </div>
       <CompletedTodoList completedTodoList={completedTodoList} />
     </div>
-
+     <Footer />
     </>
        
          
