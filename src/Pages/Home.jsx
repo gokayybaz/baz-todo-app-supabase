@@ -4,8 +4,7 @@ import { useState } from 'react'
 import TodoList from '../Components/TodoList/TodoList'
 import AddTodo from '../Components/AddTodo/AddTodo'
 import CompletedTodoList from '../Components/CompletedTodoList/CompletedTodoList'
-import { Link, useNavigate } from 'react-router'
-import supabase from '../Helpers/supabaseClient'
+import { useNavigate } from 'react-router'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 
@@ -23,11 +22,10 @@ function Home() {
   ])
 
   const [completedTodoList, setCompletedTodoList] = useState([])
-  const navigate = useNavigate();
   return (
     <>
      <Navbar />
-      <div style={{display: 'flex', justifyContent: 'center', height:'100vh'}}>
+      <div className='p-15' style={{display: 'flex', justifyContent: 'center', height:'100vh'}}>
       <div style={{marginRight: 50}}>
       <AddTodo setTodo={setTodoList} todoList={todoList} />
       <TodoList todoList={todoList} setTodoList={setTodoList} completedTodoList={completedTodoList} setCompletedTodoList={setCompletedTodoList} />

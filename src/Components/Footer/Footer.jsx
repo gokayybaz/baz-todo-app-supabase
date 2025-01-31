@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer class="bg-white shadow-md mt-auto">
+    <footer class="bg-white shadow-md">
     <div class="container mx-auto px-6 py-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 
@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
 
-        <div class="mt-8 border-t border-gray-200 pt-6 text-center text-gray-600">
+        <div class="border-t border-gray-200 pt-6 text-center text-gray-600">
             &copy; 2025 Baz Yazılım. Tüm hakları saklıdır.
         </div>
     </div>

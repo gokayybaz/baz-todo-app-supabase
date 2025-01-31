@@ -12,6 +12,8 @@ function App() {
   // Yapılan işlemler
   // > Supabase client oluşturuldu.
   // > Login ve Register supabase üzerinden gerçekleştiriliyor.
+  // > Navbar ve Footer eklendi.
+  // > 
 
   // Yapılacaklar
   // > 
