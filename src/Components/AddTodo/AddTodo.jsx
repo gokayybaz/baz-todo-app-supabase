@@ -17,7 +17,6 @@ function AddTodo(props) {
     return (
         <div className="mb-8 group">
         <div className="flex gap-2 relative">
-          {/* Input Field */}
           <input
             type="text"
             value={inputValue}
@@ -29,7 +28,6 @@ function AddTodo(props) {
             onKeyPress={(e) => e.key === 'Enter' && addTodoToList(e)}
           />
           
-          {/* Add Button */}
           <button
             onClick={() => {
                 addTodoToList({id: todoId, title: inputValue, isCompleted: false})
@@ -53,7 +51,6 @@ function AddTodo(props) {
           </button>
         </div>
       
-        {/* Micro Interaction Indicator */}
         <div className="mt-2 h-1 w-0 bg-purple-500 opacity-0 group-focus-within:w-full 
                       group-focus-within:opacity-100 transition-all duration-500 ease-out" />
       </div>
