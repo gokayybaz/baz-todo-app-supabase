@@ -25,14 +25,13 @@ function Home() {
   return (
     <>
      <Navbar />
-      <div className='p-15' style={{display: 'flex', justifyContent: 'center', height:'100vh'}}>
+      <div className='p-15' style={{display: 'flex', justifyContent: 'center'}}>
       <div style={{marginRight: 50}}>
       <AddTodo setTodo={setTodoList} todoList={todoList} />
       <TodoList todoList={todoList} setTodoList={setTodoList} completedTodoList={completedTodoList} setCompletedTodoList={setCompletedTodoList} />
       </div>
       <CompletedTodoList completedTodoList={completedTodoList} />
     </div>
-     <Footer />
     </>
        
          

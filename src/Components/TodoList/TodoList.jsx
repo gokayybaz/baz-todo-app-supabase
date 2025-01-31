@@ -65,7 +65,7 @@ function TodoList(props) {
       </div>
 
       <button
-        onClick={() => deleteTodo(todo.id)}
+        onClick={() => deleteTodo(todo)}
         className="ml-2 p-1.5 hover:bg-gray-50 rounded-lg transition-colors duration-150"
       >
         <svg
@@ -84,7 +84,6 @@ function TodoList(props) {
         </svg>
       </button>
 
-      {/* Completion Glow Effect */}
       {todo.isCompleted && (
         <div className="absolute inset-0 border-2 border-purple-100 rounded-xl pointer-events-none" />
       )}
